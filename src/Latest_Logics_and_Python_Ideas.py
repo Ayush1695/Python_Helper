@@ -38,6 +38,11 @@ def somefunc(a,b):
 
 a = somefunc(4,5)
 
+'''
+somefunc begins
+somefunc ends in  0.0 secs
+'''
+
 # If function takes multiple inputs
 from functools import wraps
 def timer(func):
