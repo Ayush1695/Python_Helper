@@ -38,3 +38,16 @@ def somefunc(a,b):
 
 a = somefunc(4,5)
 
+# If function takes multiple inputs
+from functools import wraps
+def timer(func):
+    @wraps(func)
+    def wrapper(*args,**kwargs):
+        print(f"{func.__name__!r} begins")
+        start_time = time.time()
+        result = func(*args,**kwargs)
+        print(f"{func.__name__!r} ends in {time.time()-start_time} secs")
+        return result
+    return wrapper
+
+
